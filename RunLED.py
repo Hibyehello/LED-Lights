@@ -96,6 +96,37 @@ class LED():
         else:
             print ("Red Light off")
         #GPIO.output(led, GPIO.LOW)
+
+    def LSButton(self):
+        for i in range (1,100):
+               #GPIO.setmode(GPIO.BCM)
+            #GPIO.setwarnings(False)
+    
+            #Defining which LED
+            led = random.randint(9,11)
+    
+            #GPIO.setup(led, GPIO.OUT)
+    
+            #Turn on LED
+            if led == 11:
+                print("Green Light on")
+            elif led == 10:
+                print ("Yellow Light on")
+            else:
+                print ("Red Light on")
+            #GPIO.output(led, GPIO.HIGH)
+    
+        #Turn off LED after set amount of time
+            time.sleep(0.25)
+            if led == 11:
+                print("Green Light off")
+            elif led == 10:
+                print ("Yellow Light off")
+            else:
+                print ("Red Light off")
+            #GPIO.output(led, GPIO.LOW)
+        time.sleep(0.25)
+         
     
     #Resets GPIO outputs
         #GPIO.cleanup()

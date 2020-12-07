@@ -4,7 +4,7 @@ from RunLED import *
 from tkinter.ttk import *
 
 rL = LED()
-
+TK_SILENCE_DEPRECATION=1
 
 class Window(Frame):
 
@@ -39,10 +39,14 @@ class Window(Frame):
 		
 
 		
-
+		# Make Random Button
 		randled = Button(self, text="Random Light", command=rL.Rand_LED)
 		randled.pack(side = TOP, pady=10)
-		
+
+
+		# Make Lightshow
+		lsButton = Button(self, text="Light Show", command=rL.LSButton)
+		lsButton.pack(side = TOP, pady=10)
 
 	def client_exit(self):
 		exit()
