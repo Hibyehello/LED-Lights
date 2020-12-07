@@ -4,7 +4,7 @@ from RunLED import *
 from tkinter.ttk import *
 
 rL = LED()
-TK_SILENCE_DEPRECATION=1
+
 
 class Window(Frame):
 
