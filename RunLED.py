@@ -2,6 +2,8 @@ import time
 #import RPi.GPIO as GPIO
 import random
 
+#Uncomment any line with GPIO for use with Raspberry Pi
+
 class LED():
     led = 0
     def Yellow_LED(self):
