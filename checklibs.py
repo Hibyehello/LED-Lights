@@ -2,6 +2,8 @@ import sys
 import windowqt as winqt
 import windowtk as wintk
 
+qt = 2
+
 try:
     import RPi.GPIO
     import windowqtrpi as rpiqt
