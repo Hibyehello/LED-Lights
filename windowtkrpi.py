@@ -1,7 +1,12 @@
 import sys
-from tkinter import *
-from RunLED import *
+try:
+	from tkinter import *
+except:
+	from Tkinter import *
+
+from RunLEDrpi import *
 from tkinter.ttk import *
+
 
 rL = LED()
 
@@ -51,9 +56,8 @@ class Window(Frame):
 	def client_exit(self):
 		exit()
 
-
-root = Tk()
-root.geometry("360x360")
-app = Window(root)
-
-root.mainloop()
+def main():
+	root = Tk()
+	root.geometry("360x360")
+	app = Window(root)
+	root.mainloop()
