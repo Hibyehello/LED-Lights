@@ -15,20 +15,24 @@ try:
         print ("Attempting to use PyQt5")
         qt = 1
         rpiqt.main()
-    except:
+    except ImportError:
         print ("PyQt5 is not installed")
         qt = 0
+    else:
+        qt = 1
     if qt == 0:
         try:
             try:
                 import tkinter
-            except:
+            except ImportError:
                 import Tkinter
             print ("Using tkinter")
             rpitk.main()
-        except:
+            
+        except ImportError:
             print ("Cannot run Program")
-except:
+            gpio == 0
+except ImportError:
     print ("No GPIO pins found, or Not a Raspberry pi")
     gpio = 0
 
@@ -46,7 +50,7 @@ if qt == 0:
     try:
         try:
             import tkinter
-        except:
+        except ImportError:
             import Tkinter
         print ("using tkinter")
         wintk.main()
