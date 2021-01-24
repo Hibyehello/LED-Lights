@@ -1,11 +1,11 @@
 import sys
 import windowqt as winqt
 import windowtk as wintk
-import windowqtrpi as rpiqt
-import windowtkrpi as rpitk
 
 try:
     import RPi.GPIO
+    import windowqtrpi as rpiqt
+    import windowtkrpi as rpitk
     gpio = 1
     print ("GPIO pins are enabled")
     try:
